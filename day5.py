@@ -3,7 +3,7 @@ import fileinput
 
 nice_1 = 0
 nice_2 = 0
-for line in fileinput.input():
+for line in fileinput.input("./data/day5.test.txt"):
     line = line.rstrip()
     threevowels = len(re.findall(r'([aeiou])', line)) >= 3
     double = re.search(r'([a-z])\1', line) is not None
